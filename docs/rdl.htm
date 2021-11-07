@@ -23,7 +23,7 @@ function setup()
 			if(caa>0xef)
 			{
 				apend='0';
-				if(caa>0xff)(caa=0xff;)
+				if(caa>0xff){caa=0xff;}
 			}
 			caa=apend+((0xff-caa).toString(16));
 			blo.style.backgroundColor='#ff'+caa+caa;
