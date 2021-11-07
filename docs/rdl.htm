@@ -20,8 +20,8 @@ function setup()
 		{
 			var caa=(duuz[i]>>5);
 			if(caa>0xf)(caa=0xf)
-			caa=0xf-caa;
-			blo.style.backgroundColor='#'+caa.toString(16)+'ff';
+			caa=(0xf-caa).toString(16)
+			blo.style.backgroundColor='#f'+caa+caa;
 			lnk.title+=" "+duuz[i]+"K";
 		}
 		blo.appendChild(lnk);
