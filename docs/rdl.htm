@@ -18,7 +18,10 @@ function setup()
 		lnk.title=syg+i;
 		if(duuz[i]!=0)
 		{
-			blo.style.backgroundColor='#400';
+			var caa=(duuz[i]>>5);
+			if(caa>0xf)(caa=0xf)
+			caa=0xf-caa;
+			blo.style.backgroundColor='#'+caa.toString(16)+'ff';
 			lnk.title+=" "+duuz[i]+"K";
 		}
 		blo.appendChild(lnk);
