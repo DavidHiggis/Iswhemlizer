@@ -19,14 +19,10 @@ function setup()
 		if(duuz[i]!=0)
 		{
 			var caa=(duuz[i]>>1);
-			var apend='';
-			if(caa>0xef)
-			{
-				apend='0';
-				if(caa>0xff){caa=0xff;}
-			}
-			caa=apend+((0xff-caa).toString(16));
-			blo.style.backgroundColor='#ff'+caa+caa;
+			if(caa>0xff){caa=0xff;}
+			
+			caa=(0xff-caa);
+			blo.style.backgroundColor='rgb('+0xff+', '+caa+', '+caa+')';
 			lnk.title+=" "+duuz[i]+"K";
 		}
 		blo.appendChild(lnk);
